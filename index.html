@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>Thing
+    <title>My Website</title>
+    <link id="lightSheet" rel="stylesheet" href="css/style.css">
+    
+
 </head>
+
 <body>
-    peter piper.
+    <div id="content">
+        <div id="banner">
+            <h1>My Website</h1>
+            <a href="about.html">About Me</a>
+            <a href="gameguide.html">Get To School</a>
+            <a href="#" onclick="changeSheet()">Change Mode</a>
+        </div>
+        <div id="blogposts">
+            <div class="post">
+                <h2>About Me</h2>
+                <p>I'm a freshmen and I love softball.</p>
+                <p>Click <a href="about.html">here</a> to learn more.</p>
+            </div>
+        </div>
+        <div class="post">
+            <h2 style="display: block;">Get To School</h2>
+            <img src="img/gamestart.png" alt="Game loading screen" class="left">
+            <p>Get to school is a smash hit indie success about getting to school... presumably.</p>
+            <p>Click <a href="gettoschool/index.html">Here</a> to play.</p>
+        </div>
+
+
+    </div>
 </body>
+
+<script>
+var lightMode = true;
+
+
+function changeSheet() {
+    //make lightMode equal NOT lightMode
+    ligthMode = !lightMode;
+    var lightSheet = document.getElementById("lightSheet");
+    var darkSheet = document.getElementById("darkSheet");
+
+    // if ligthMode turned off, display dark stylesheet
+    if (lightMode == false) {
+        console.log("Turning dark mode on...");
+        darkSheet.media = "";
+        lightSheet.media = "none";
+    } else {
+        console.log("Turning light mode on...");
+        darkSheet.media = "none";
+        lightSheet.media = "";
+    }
+}
+</script>
+
+
 </html>
